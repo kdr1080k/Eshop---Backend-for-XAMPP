@@ -1,0 +1,708 @@
+{
+	"info": {
+		"_postman_id": "3091811e-80ba-43e7-9c20-9a89fa979479",
+		"name": "OneStop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "category_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single_category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "category_edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sus\n",
+									"type": "text"
+								},
+								{
+									"key": "parentid",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "createdate",
+									"value": "2022-22-22",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/update_c/1?name=foiewf&parentid=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update_c",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "foiewf"
+								},
+								{
+									"key": "parentid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete_catgegory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/delete_c/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete_c",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "product_details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "product_update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "vfef\n",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/update_product/3?name=fjeio",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update_product",
+								"3"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "fjeio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products_filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "role",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/delete_product/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete_product",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "order_list",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "order_create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/create_order?customerid=12",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"create_order"
+							],
+							"query": [
+								{
+									"key": "customerid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "customerid",
+									"value": "1\n",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/order_update/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order_update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/order_delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order_delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_status_change",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/order_status_change/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order_status_change",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_details ????",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/order_list_id/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order_list_id",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Whishlist",
+			"item": [
+				{
+					"name": "wistlist_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/wishlist_list",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"wishlist_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wishlist_customer_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/wishlist_cid/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"wishlist_cid",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wishlist_create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "wishlist_delete_by_user_id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "wishlist_delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "employee_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/employee_list",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer_list",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "user_create_employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "uname",
+									"value": "foiejw",
+									"type": "default"
+								},
+								{
+									"key": "upass",
+									"value": "eofiweoifj",
+									"type": "default"
+								},
+								{
+									"key": "urole",
+									"value": "3\n",
+									"type": "default"
+								},
+								{
+									"key": "fname",
+									"value": "dofijeio",
+									"type": "default"
+								},
+								{
+									"key": "lname",
+									"value": "oefijewoi",
+									"type": "default"
+								},
+								{
+									"key": "uaddress",
+									"value": "oeijfwoi",
+									"type": "default"
+								},
+								{
+									"key": "ucontact",
+									"value": "342",
+									"type": "default"
+								},
+								{
+									"key": "isactive",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/user_create_employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user_create_employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_create_customer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "user_delete_employee",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "user_edit_employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "uname",
+									"value": "sys",
+									"type": "default"
+								},
+								{
+									"key": "upass",
+									"value": "ofijeoifj",
+									"type": "default"
+								},
+								{
+									"key": "fname",
+									"value": "oiewjfeowij",
+									"type": "default"
+								},
+								{
+									"key": "lname",
+									"value": "eodifnweio",
+									"type": "default"
+								},
+								{
+									"key": "uaddress",
+									"value": "oeijfweioj",
+									"type": "default"
+								},
+								{
+									"key": "ucontact",
+									"value": "911",
+									"type": "default"
+								},
+								{
+									"key": "isactive",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "urole",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/user_edit_employee/19",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user_edit_employee",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_edit_customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user_edit_customer/24?uname=foiewjiofj&upass=eofiweoijf&fname=oewijfewio&lname=eofijewoijf&uaddress=eofijewoij&ucontact=911&isactive=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user_edit_customer",
+								"24"
+							],
+							"query": [
+								{
+									"key": "uname",
+									"value": "foiewjiofj"
+								},
+								{
+									"key": "upass",
+									"value": "eofiweoijf"
+								},
+								{
+									"key": "urole",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "fname",
+									"value": "oewijfewio"
+								},
+								{
+									"key": "lname",
+									"value": "eofijewoijf"
+								},
+								{
+									"key": "uaddress",
+									"value": "eofijewoij"
+								},
+								{
+									"key": "ucontact",
+									"value": "911"
+								},
+								{
+									"key": "isactive",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "oiefji",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "eoufwefo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/user_login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user_login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
